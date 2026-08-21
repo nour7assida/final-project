@@ -1,143 +1,521 @@
+:root {
+  --ink: #171714;
+  --paper: #f3eee5;
+  --cream: #e7ddcf;
+  --terracotta: #b85036;
+  --muted: #756f66;
+  --line: rgba(23, 23, 20, 0.2);
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f1e8;
-  color: #333;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
 }
-
-header {
-  background-color: #b83227;
-  color: white;
-  padding: 20px;
-  text-align: center;
+a {
+  color: inherit;
+  text-decoration: none;
 }
-
-header h1 {
+.site-header {
+  align-items: center;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 5vw;
+}
+.brand {
+  align-items: center;
+  display: flex;
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 600;
+  gap: 10px;
+}
+.brand span {
+  align-items: center;
+  border: 1px solid currentColor;
+  display: inline-flex;
+  font-family: var(--sans);
+  font-size: 11px;
+  height: 29px;
+  justify-content: center;
+  letter-spacing: 0.08em;
+  width: 29px;
+}
+nav {
+  display: flex;
+  gap: 34px;
+  margin-left: 80px;
+}
+nav a,
+.header-action {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+nav a {
+  color: rgba(243, 238, 229, 0.65);
+  transition: color 0.2s ease;
+}
+nav a:hover,
+.header-action:hover {
+  color: #fff;
+}
+.header-action {
+  border-bottom: 1px solid var(--terracotta);
+  padding-bottom: 5px;
+}
+.header-action span,
+.button span,
+.text-link span {
+  color: var(--terracotta);
+  margin-left: 13px;
+}
+.hero {
+  background:
+    linear-gradient(90deg, rgba(13, 15, 13, 0.8), rgba(13, 15, 13, 0.12)),
+    url("https://www.syrianrestaurantlimassol.com.cy/wp-content/uploads/2014/05/00191.jpg")
+      center/cover;
+  color: var(--paper);
+  display: flex;
+  min-height: 78vh;
+  padding: 10vh 10vw 8vh;
+  position: relative;
+}
+.hero-copy {
+  max-width: 670px;
+  padding-top: 7vh;
+}
+.eyebrow {
+  color: var(--terracotta);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  margin: 0 0 21px;
+  text-transform: uppercase;
+}
+.hero .eyebrow {
+  color: #df9a82;
+}
+h1,
+h2,
+blockquote {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+.hero h1 {
+  font-size: clamp(58px, 8vw, 126px);
+  line-height: 0.92;
   margin: 0;
 }
-
-nav {
-  margin-top: 15px;
+em {
+  color: var(--terracotta);
+  font-style: italic;
 }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 10px;
+.hero-text {
+  color: rgba(243, 238, 229, 0.77);
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 33px 0;
+  max-width: 330px;
 }
-
-nav a:hover {
-  text-decoration: underline;
+.button {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  padding: 16px 20px;
+  text-transform: uppercase;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
-
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background-color: #f4d6b5;
+.button:hover {
+  transform: translateY(-3px);
 }
-
-.hero h2 {
-  font-size: 40px;
+.button-light {
+  background: var(--paper);
+  color: var(--ink);
 }
-
-.hero p {
-  font-size: 18px;
+.button-dark {
+  background: var(--ink);
+  color: var(--paper);
 }
-
-button {
-  background-color: #b83227;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #8f261e;
-}
-
-#menu {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.food-container {
+.hero-note {
+  align-self: flex-end;
+  border-top: 1px solid rgba(243, 238, 229, 0.35);
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 22px;
+  margin-left: auto;
+  padding-top: 17px;
+  width: 215px;
 }
-
+.hero-note span,
+.food-number {
+  color: var(--terracotta);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+.hero-note p {
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.35;
+  margin: -5px 0 0;
+}
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 5vw;
+}
+.intro {
+  padding: 145px 10vw;
+}
+.section-label {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+.section-label span {
+  color: var(--terracotta);
+  margin-right: 12px;
+}
+h2 {
+  font-size: clamp(41px, 5vw, 68px);
+  line-height: 0.98;
+  margin: 0 0 25px;
+}
+.intro-copy > p:not(.eyebrow),
+.menu-note {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+  max-width: 380px;
+}
+.text-link {
+  border-bottom: 1px solid var(--line);
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  margin-top: 18px;
+  padding-bottom: 9px;
+  text-transform: uppercase;
+}
+.intro-image {
+  min-height: 460px;
+}
+.image-story {
+  background: url("https://www.syrianrestaurantlimassol.com.cy/wp-content/uploads/2014/05/100520504-spices.jpg")
+    center/cover;
+}
+.menu-section {
+  background: var(--cream);
+  padding: 120px 10vw 100px;
+}
+.menu-heading {
+  align-items: start;
+  margin-bottom: 65px;
+}
+.menu-note {
+  align-self: end;
+  margin: 0 0 5px;
+}
+.food-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
 .food {
-  background-color: white;
-  width: 250px;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px gray;
+  min-width: 0;
 }
-
+.food-image {
+  aspect-ratio: 1.1;
+  background-position: center;
+  background-size: cover;
+  filter: saturate(0.85);
+}
+.food-shawarma {
+  background-image: url("https://i0.wp.com/nutrient-matters.com/wp-content/uploads/2025/03/IMG_5274.jpg?fit=580%2C1024&ssl=1/");
+}
+.food-kibbeh {
+  background-image: url("https://zaatarandzaytoun.com/wp-content/uploads/2024/03/12.jpg");
+}
+.food-mezze {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmQtVqRyHt3MUusgebhZ2aL5gWzlssoO1AQQ7vWHFNAtD7S9J4A14QU8&s=10");
+}
+.food-info {
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 25px 1fr auto;
+  padding: 22px 0 24px;
+}
 .food h3 {
-  color: #b83227;
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 500;
+  margin: -5px 0 9px;
 }
-
-.about {
+.food p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+.food strong {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 500;
+}
+.menu-link-wrap {
   text-align: center;
-  padding: 60px 20px;
-  background-color: #f4d6b5;
+  padding-top: 70px;
 }
-
-.about p {
-  max-width: 600px;
-  margin: auto;
-  line-height: 1.6;
-}
-
-.login,
-.contact {
+.quote-section {
+  background: var(--terracotta);
+  color: var(--paper);
+  padding: 145px 10vw;
   text-align: center;
-  padding: 70px 20px;
-  min-height: 500px;
 }
-
+.quote-section .eyebrow {
+  color: #f5c0ac;
+}
+blockquote {
+  font-size: clamp(35px, 5vw, 70px);
+  line-height: 1.05;
+  margin: 0 auto 25px;
+  max-width: 900px;
+}
+.signature {
+  font-family: var(--serif);
+  font-size: 15px;
+}
+.site-footer {
+  background: var(--ink);
+  color: var(--paper);
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 10vw;
+  padding: 80px 10vw 28px;
+}
+.site-footer p {
+  color: rgba(243, 238, 229, 0.55);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.footer-details {
+  display: flex;
+  gap: 10vw;
+}
+.footer-details span {
+  color: var(--terracotta);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(243, 238, 229, 0.2);
+  color: rgba(243, 238, 229, 0.5);
+  display: flex;
+  font-size: 10px;
+  grid-column: 1 / -1;
+  justify-content: space-between;
+  letter-spacing: 0.12em;
+  margin-top: 45px;
+  padding-top: 22px;
+  text-transform: uppercase;
+}
+.footer-bottom a {
+  color: var(--paper);
+}
+.page-intro {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 110px 10vw 100px;
+}
+.page-intro h1 {
+  font-size: clamp(58px, 8vw, 112px);
+  line-height: 0.9;
+  margin: 0;
+}
+.page-intro > p:last-child {
+  color: rgba(243, 238, 229, 0.65);
+  line-height: 1.7;
+  margin: 35px 0 0;
+  max-width: 330px;
+}
+.visit-grid {
+  display: grid;
+  gap: 10vw;
+  grid-template-columns: 1fr 1fr;
+  padding: 110px 10vw;
+}
+.visit-grid h2 {
+  font-size: 45px;
+}
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.hours {
+  max-width: 430px;
+}
+.hours p {
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+.hours span {
+  color: var(--muted);
+}
+.booking {
+  background: var(--cream);
+  display: grid;
+  gap: 10vw;
+  grid-template-columns: 1fr 1fr;
+  padding: 115px 10vw;
+}
 form {
-  background-color: white;
-  max-width: 400px;
-  margin: 30px auto;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px gray;
-  text-align: left;
+  max-width: 480px;
 }
-
 label {
   display: block;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
 }
-
 input,
 textarea {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  color: var(--ink);
+  display: block;
+  font: 14px var(--sans);
+  margin: 0 0 28px;
+  outline: 0;
+  padding: 12px 0;
+  resize: vertical;
   width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
-
-form button {
-  margin-top: 20px;
+input:focus,
+textarea:focus {
+  border-color: var(--terracotta);
 }
-
+::placeholder {
+  color: #968f84;
+}
+form .button {
+  border: 0;
+  cursor: pointer;
+}
 #loginMessage,
 #contactMessage {
-  color: #b83227;
-  font-weight: bold;
+  color: var(--terracotta);
+  font-size: 12px;
+  font-weight: 500;
+}
+.login {
+  min-height: 560px;
+}
+.login form {
+  margin-top: 45px;
+}
+.login form .button {
+  margin-top: 8px;
 }
 
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
+@media (max-width: 700px) {
+  .site-header {
+    gap: 21px;
+    padding: 20px 6vw;
+  }
+  nav {
+    gap: 18px;
+    margin: 0;
+    order: 3;
+    width: 100%;
+  }
+  .header-action {
+    margin-left: auto;
+  }
+  .hero {
+    min-height: 680px;
+    padding: 70px 8vw 45px;
+  }
+  .hero-copy {
+    padding-top: 5vh;
+  }
+  .hero-note {
+    margin-top: auto;
+  }
+  .section-grid,
+  .food-container {
+    grid-template-columns: 1fr;
+  }
+  .intro,
+  .menu-section {
+    padding: 85px 8vw;
+  }
+  .section-label {
+    margin-bottom: 35px;
+  }
+  .intro-image {
+    min-height: 330px;
+    margin-top: 25px;
+  }
+  .menu-heading {
+    gap: 0;
+    margin-bottom: 45px;
+  }
+  .menu-note {
+    margin-top: 10px;
+  }
+  .food-image {
+    aspect-ratio: 1.35;
+  }
+  .quote-section {
+    padding: 90px 8vw;
+  }
+  .site-footer {
+    display: block;
+    padding: 65px 8vw 25px;
+  }
+  .footer-details {
+    gap: 45px;
+    margin-top: 45px;
+  }
+  .footer-bottom {
+    margin-top: 45px;
+  }
+  .page-intro,
+  .visit-grid,
+  .booking {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+  .visit-grid,
+  .booking {
+    grid-template-columns: 1fr;
+    gap: 55px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+  .booking h2 {
+    margin-bottom: 15px;
+  }
 }

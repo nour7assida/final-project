@@ -4,8 +4,8 @@ if (loginForm) {
   loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    document.getElementById("loginMessage").innerHTML =
-      "Login successful! Welcome to Syrian Taste 🇸🇾";
+    document.getElementById("loginMessage").textContent =
+      "You are in. Welcome back.";
   });
 }
 
@@ -15,8 +15,8 @@ if (contactForm) {
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    document.getElementById("contactMessage").innerHTML =
-      "Thank you! Your message has been sent.";
+    document.getElementById("contactMessage").textContent =
+      "Thanks. We will get back to you shortly.";
 
     contactForm.reset();
   });

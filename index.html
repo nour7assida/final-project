@@ -1,89 +1,154 @@
 <!doctype html>
 <html>
   <head>
-    <title>Syrian Taste</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syrian Taste | Damascus at the table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <header>
-      <h1>🇸🇾 Syrian Taste</h1>
-
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="index.html#menu">Menu</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html">Login</a>
+    <header class="site-header">
+      <a class="brand" href="index.html"><span>ST</span> Syrian Taste</a>
+      <nav aria-label="Main navigation">
+        <a href="#story">Our story</a>
+        <a href="#menu">Menu</a>
+        <a href="contact.html">Visit us</a>
       </nav>
+      <a class="header-action" href="contact.html#booking"
+        >Book a table <span>↗</span></a
+      >
     </header>
 
-    <section class="hero">
-      <h2>Welcome to Syrian Taste</h2>
-
-      <p>
-        Enjoy delicious traditional Syrian food made with authentic and fresh
-        ingredients.
-      </p>
-
-      <a href="#menu">
-        <button>See Our Menu</button>
-      </a>
-    </section>
-
-    <section id="menu">
-      <h2>Our Menu</h2>
-
-      <div class="food-container">
-        <div class="food">
-          <h3>Chicken Shawarma</h3>
-          <p>Chicken, garlic sauce and pickles.</p>
-          <h4>$10</h4>
-        </div>
-
-        <div class="food">
-          <h3>🧆 Kibbeh</h3>
-          <p>Traditional Syrian kibbeh with meat and spices.</p>
-          <h4>$7</h4>
-        </div>
-
-        <div class="food">
-          <h3>🥗 Fattoush</h3>
-          <p>Fresh vegetables with crispy bread.</p>
-          <h4>$5</h4>
-        </div>
-        <div class="food">
-          <h3>yalanji</h3>
-          <p>
-            Grape leaves rolled and stuffed with short-grain rice, tomatoes,
-            onions, parsley, mint, lemon juice, and olive oil..
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Damascus · Noureddin · Since 1921</p>
+          <h1>A table full<br />of <em>home.</em></h1>
+          <p class="hero-text">
+            Syrian dishes made with family recipes, fresh ingredients, and a lot
+            of garlic.
           </p>
-          <h4>$10</h4>
+          <a class="button button-light" href="#menu"
+            >Explore the menu <span>↓</span></a
+          >
         </div>
-        <div class="food">
-          <h3>maqlouba</h3>
-          <p>rice and eggplants and meat</p>
-          <h4>$15</h4>
+        <div class="hero-note">
+          <span>01</span>
+          <p>Syrian food<br />made for sharing</p>
         </div>
-        <div class="food">
-          <h3>kousa mahshi</h3>
-          <p>light green squash filled with rice meat</p>
-          <h4>$15</h4>
+      </section>
+
+      <section class="intro section-grid" id="story">
+        <div class="section-label"><span>✦</span> The feeling</div>
+        <div class="intro-copy">
+          <p class="eyebrow">A little bit of Damascus</p>
+          <h2>Food from home.<br /><em>Made fresh.</em></h2>
+          <p>
+            Syrian Taste is a small neighbourhood restaurant where friends and
+            family can sit down together and enjoy a proper meal.
+          </p>
+          <a class="text-link" href="contact.html">Meet us <span>↗</span></a>
+        </div>
+        <div
+          class="intro-image image-story"
+          role="img"
+          aria-label="A spread of Middle Eastern dishes on a table"
+        ></div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="menu-heading section-grid">
+          <div class="section-label"><span>✦</span> From our kitchen</div>
+          <div>
+            <p class="eyebrow">Made to share</p>
+            <h2>Small plates,<br /><em>big stories.</em></h2>
+          </div>
+          <p class="menu-note">
+            These are some of the dishes our regulars come back for. Order a few
+            for the table and share them.
+          </p>
+        </div>
+        <div class="food-container">
+          <article class="food featured-food">
+            <div class="food-image food-shawarma"></div>
+            <div class="food-info">
+              <span class="food-number">01</span>
+              <div>
+                <h3>Chicken shawarma</h3>
+                <p>
+                  Charcoal-roasted chicken, toum, pickles and warm saj bread.
+                </p>
+              </div>
+              <strong>€12</strong>
+            </div>
+          </article>
+          <article class="food">
+            <div class="food-image food-kibbeh"></div>
+            <div class="food-info">
+              <span class="food-number">02</span>
+              <div>
+                <h3>Kibbeh</h3>
+                <p>
+                  Cracked wheat, spiced lamb and pine nuts, baked until golden.
+                </p>
+              </div>
+              <strong>€11</strong>
+            </div>
+          </article>
+          <article class="food">
+            <div class="food-image food-mezze"></div>
+            <div class="food-info">
+              <span class="food-number">03</span>
+              <div>
+                <h3>Garden mezze</h3>
+                <p>Hummus, smoky baba ghanoush, fattoush and fresh herbs.</p>
+              </div>
+              <strong>€16</strong>
+            </div>
+          </article>
+        </div>
+        <div class="menu-link-wrap">
+          <a class="button button-dark" href="contact.html#booking"
+            >Reserve your table <span>↗</span></a
+          >
+        </div>
+      </section>
+
+      <section class="quote-section">
+        <p class="eyebrow">A note from the kitchen</p>
+        <blockquote>
+          “The best meals are the ones that make room for one more.”
+        </blockquote>
+        <p class="signature">— The Syrian Taste family</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="brand" href="index.html"><span>ST</span> Syrian Taste</a>
+        <p>A modern Syrian table<br />in the heart of Limassol.</p>
+      </div>
+      <div class="footer-details">
+        <div>
+          <span>Find us</span>
+          <p>14 Anexartisias Street<br />Limassol, Cyprus</p>
+        </div>
+        <div>
+          <span>Say hello</span>
+          <p>+357 25 000 000<br />hello@syriantaste.com</p>
         </div>
       </div>
-    </section>
-
-    <section class="about">
-      <h2>About Us</h2>
-
-      <p>
-        Syrian Taste is a restaurant inspired by the traditional food and
-        culture of Syria. Our goal is to bring the real taste of Syria to
-        everyone.
-      </p>
-    </section>
-
-    <footer>
-      <p>© 2026 Syrian Taste 🇸🇾</p>
+      <div class="footer-bottom">
+        <span>© 2026 Syrian Taste</span
+        ><a href="contact.html">Contact <span>↗</span></a>
+      </div>
     </footer>
 
     <script src="script.js"></script>
