@@ -96,7 +96,7 @@ nav a:hover,
   max-width: 670px;
   padding-top: 7vh;
 }
-.eyebrow {
+.ll {
   color: var(--terracotta);
   font-size: 10px;
   letter-spacing: 0.2em;
@@ -286,7 +286,7 @@ h2 {
   padding: 145px 10vw;
   text-align: center;
 }
-.quote-section .eyebrow {
+.quote-section .ll {
   color: #f5c0ac;
 }
 blockquote {
